@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco-Friendly DIY Projects</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #4CAF50;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .section {
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-card {
+            margin: 20px 0;
+        }
+
+        .project-card img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .project-card h3 {
+            margin: 10px 0;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Eco-Friendly DIY Projects</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="section">
+        <h2>Welcome to Eco-Friendly DIY Projects</h2>
+        <p>Discover creative and sustainable projects that you can easily make at home.</p>
+    </section>
+
+    <section id="projects" class="section">
+        <h2>Featured Projects</h2>
+        <div class="project-card">
+            <img src="images/plant-pots.jpg" alt="DIY Plant Pots">
+            <h3>DIY Plant Pots</h3>
+            <p>Learn how to make biodegradable plant pots from household items.</p>
+            <button onclick="showMore('plantPots')">Read More</button>
+            <div id="plantPots" class="hidden">
+                <p>Materials: Old newspapers, water, seeds. Step-by-step guide...</p>
+            </div>
+        </div>
+        <div class="project-card">
+            <img src="images/compost-bin.jpg" alt="DIY Compost Bin">
+            <h3>DIY Compost Bin</h3>
+            <p>Create your own compost bin from recycled materials.</p>
+            <button onclick="showMore('compostBin')">Read More</button>
+            <div id="compostBin" class="hidden">
+                <p>Materials: Plastic container, drill, organic waste. Step-by-step guide...</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <h2>About Us</h2>
+        <p>We are passionate about promoting sustainability through creative DIY projects. Our goal is to inspire others to reduce waste and make the world a greener place.</p>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Eco-Friendly DIY Projects. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showMore(projectId) {
+            var element = document.getElementById(projectId);
+            if (element.style.display === "none" || element.style.display === "") {
+                element.style.display = "block";
+            } else {
+                element.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
